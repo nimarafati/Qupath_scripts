@@ -24,7 +24,7 @@ print('There are ' + channelNames.size() + ' channels/markers in this image')
 // Loop through each channel
 channelNames.eachWithIndex { channelName, index ->
     // Print the channel name
-    def outputPath = buildFilePath(outputDir, "channel_${channelName}.tif")
+    def outputPath = buildFilePath(outputDir, "${channelName}.tif")
     print("Channel " + index + ": " + channelName + ' ==> '+ outputPath)
     server2 = new TransformedServerBuilder(server)
     .extractChannels(index)
